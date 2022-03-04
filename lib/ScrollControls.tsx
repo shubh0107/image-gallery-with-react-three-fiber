@@ -189,6 +189,7 @@ const ScrollCanvas = React.forwardRef(({ children }, ref) => {
   });
   return <group ref={mergeRefs([ref, group])}>{children}</group>;
 });
+ScrollCanvas.displayName = 'ScrollCanvas'
 
 const ScrollHtml = React.forwardRef(
   ({ children, style, ...props }: { children?: React.ReactNode; style?: React.StyleHTMLAttributes<any> }, ref) => {
@@ -218,6 +219,7 @@ const ScrollHtml = React.forwardRef(
     return null;
   }
 );
+ScrollHtml.displayName = 'ScrollHtml'
 
 type ScrollProps = {
   html?: boolean;
@@ -228,3 +230,4 @@ export const Scroll = React.forwardRef(({ html, ...props }: ScrollProps, ref) =>
   const El = html ? ScrollHtml : ScrollCanvas;
   return <El ref={ref} {...props} />;
 });
+Scroll.displayName = 'Scroll'
