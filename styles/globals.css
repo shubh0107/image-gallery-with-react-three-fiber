@@ -56,7 +56,11 @@ a {
   align-items: center;
 
 }
+
 #instagram-link img {
   margin-left: 10px;
+}
 
+.loader-div {
+  width: 100%;
 }

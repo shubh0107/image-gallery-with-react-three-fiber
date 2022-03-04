@@ -1,7 +1,7 @@
 import * as THREE from "three";
 import { Suspense, useRef } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { Preload, Image as ImageImpl, ScrollControls, Scroll, useScroll } from "@react-three/drei";
+import { Preload, Image as ImageImpl, ScrollControls, Scroll, useScroll, Html, useProgress } from "@react-three/drei";
 
 function Image(props) {
   const ref = useRef();
@@ -54,31 +54,46 @@ function Pages() {
   );
 }
 
+function Loader() {
+  const progress = useProgress(state => state.progress)
+  if (progress !== 100) {
+    return (
+      <Html center wrapperClass="loader-div">
+        {progress.toFixed()}% loaded
+      </Html>
+    );
+  }
+
+  return null
+}
+
 export default function Home() {
   return (
-    <Canvas gl={{ antialias: false }} dpr={[1, 1.5]}>
-      {/* <Environment preset="city" /> */}
-      <Suspense fallback={null}>
-        <ScrollControls infinite horizontal damping={4} pages={6} distance={1}>
-          <Scroll>
-            <Pages />
-          </Scroll>
-          <Scroll html>
-            <h1 style={{ position: "absolute", top: "20vh", left: "-75vw" }}>Art</h1>
-            <h1 style={{ position: "absolute", top: "20vh", left: "25vw" }}>Till</h1>
-            <h1 style={{ position: "absolute", top: "20vh", left: "125vw" }}>Death</h1>
-            <h1 style={{ position: "absolute", top: "20vh", left: "225vw" }}>We</h1>
-            <h1 style={{ position: "absolute", top: "20vh", left: "325vw" }}>Do</h1>
+    <>
+      <Canvas gl={{ antialias: false }} dpr={[1, 1.5]}>
+        <Loader />
+        <Suspense fallback={null}>
+          <ScrollControls infinite horizontal damping={4} pages={6} distance={1}>
+            <Scroll>
+              <Pages />
+            </Scroll>
+            <Scroll html>
+              <h1 style={{ position: "absolute", top: "20vh", left: "-75vw" }}>Art</h1>
+              <h1 style={{ position: "absolute", top: "20vh", left: "25vw" }}>Till</h1>
+              <h1 style={{ position: "absolute", top: "20vh", left: "125vw" }}>Death</h1>
+              <h1 style={{ position: "absolute", top: "20vh", left: "225vw" }}>We</h1>
+              <h1 style={{ position: "absolute", top: "20vh", left: "325vw" }}>Do</h1>
 
-            <h1 style={{ position: "absolute", top: "20vh", left: "425vw" }}>Art</h1>
-            <h1 style={{ position: "absolute", top: "20vh", left: "525vw" }}>Till</h1>
-            <h1 style={{ position: "absolute", top: "20vh", left: "625vw" }}>Death</h1>
-            <h1 style={{ position: "absolute", top: "20vh", left: "725vw" }}>We</h1>
-            <h1 style={{ position: "absolute", top: "20vh", left: "825vw" }}>Do</h1>
-          </Scroll>
-        </ScrollControls>
-        <Preload />
-      </Suspense>
-    </Canvas>
+              <h1 style={{ position: "absolute", top: "20vh", left: "425vw" }}>Art</h1>
+              <h1 style={{ position: "absolute", top: "20vh", left: "525vw" }}>Till</h1>
+              <h1 style={{ position: "absolute", top: "20vh", left: "625vw" }}>Death</h1>
+              <h1 style={{ position: "absolute", top: "20vh", left: "725vw" }}>We</h1>
+              <h1 style={{ position: "absolute", top: "20vh", left: "825vw" }}>Do</h1>
+            </Scroll>
+          </ScrollControls>
+          <Preload />
+        </Suspense>
+      </Canvas>
+    </>
   );
 }
