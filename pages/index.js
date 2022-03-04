@@ -1,8 +1,7 @@
 import * as THREE from "three";
 import { Suspense, useRef } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { Preload, Image as ImageImpl } from "@react-three/drei";
-import { ScrollControls, Scroll, useScroll } from "../lib/ScrollControls";
+import { Preload, Image as ImageImpl, ScrollControls, Scroll, useScroll } from "@react-three/drei";
 
 function Image(props) {
   const ref = useRef();
@@ -58,6 +57,7 @@ function Pages() {
 export default function Home() {
   return (
     <Canvas gl={{ antialias: false }} dpr={[1, 1.5]}>
+      {/* <Environment preset="city" /> */}
       <Suspense fallback={null}>
         <ScrollControls infinite horizontal damping={4} pages={6} distance={1}>
           <Scroll>
