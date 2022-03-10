@@ -78,17 +78,17 @@ export default function Home() {
               <Pages />
             </Scroll>
             <Scroll html>
-              <h1 style={{ position: "absolute", top: "20vh", left: "-75vw" }}>Art</h1>
-              <h1 style={{ position: "absolute", top: "20vh", left: "25vw" }}>Till</h1>
-              <h1 style={{ position: "absolute", top: "20vh", left: "125vw" }}>Death</h1>
-              <h1 style={{ position: "absolute", top: "20vh", left: "225vw" }}>We</h1>
-              <h1 style={{ position: "absolute", top: "20vh", left: "325vw" }}>Do</h1>
+              {/* <h1 style={{ position: "absolute", top: "20vh", left: "-75vw" }}></h1>
+              <h1 style={{ position: "absolute", top: "20vh", left: "25vw" }}></h1>
+              <h1 style={{ position: "absolute", top: "20vh", left: "125vw" }}></h1>
+              <h1 style={{ position: "absolute", top: "20vh", left: "225vw" }}></h1>
+              <h1 style={{ position: "absolute", top: "20vh", left: "325vw" }}></h1>
 
-              <h1 style={{ position: "absolute", top: "20vh", left: "425vw" }}>Art</h1>
-              <h1 style={{ position: "absolute", top: "20vh", left: "525vw" }}>Till</h1>
-              <h1 style={{ position: "absolute", top: "20vh", left: "625vw" }}>Death</h1>
-              <h1 style={{ position: "absolute", top: "20vh", left: "725vw" }}>We</h1>
-              <h1 style={{ position: "absolute", top: "20vh", left: "825vw" }}>Do</h1>
+              <h1 style={{ position: "absolute", top: "20vh", left: "425vw" }}></h1>
+              <h1 style={{ position: "absolute", top: "20vh", left: "525vw" }}></h1>
+              <h1 style={{ position: "absolute", top: "20vh", left: "625vw" }}></h1>
+              <h1 style={{ position: "absolute", top: "20vh", left: "725vw" }}></h1>
+              <h1 style={{ position: "absolute", top: "20vh", left: "825vw" }}></h1> */}
             </Scroll>
           </ScrollControls>
           <Preload />

@@ -1,4 +1,4 @@
-@import url('https://rsms.me/inter/inter.css');
+@import url("https://rsms.me/inter/inter.css");
 
 * {
   box-sizing: border-box;
@@ -14,12 +14,11 @@ body,
   padding: 0;
 }
 
-
 body {
   overscroll-behavior: none;
   background: #efefef;
-  font-family: 'Inter var', sans-serif;
-  cursor: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxMCIgZmlsbD0iYmxhY2siLz48L3N2Zz4='),
+  font-family: "Inter var", sans-serif;
+  cursor: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSIxMCIgZmlsbD0iYmxhY2siLz48L3N2Zz4="),
     auto;
 }
 
@@ -37,28 +36,33 @@ a {
   pointer-events: all;
   color: black;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 16px;
 }
 
-#name {
+p#title {
   position: absolute;
-  top: 2vw;
+  top: 1vw;
   left: 2vw;
   z-index: 20;
+  margin: 0;
 }
 
-#instagram-link {
+.social-links {
   position: absolute;
-  bottom: 2vw;
-  z-index: 20;
+  bottom: 1vw;
   right: 2vw;
+  z-index: 20;
   display: flex;
   align-items: center;
-
+  gap: 10px;
 }
 
-#instagram-link img {
-  margin-left: 10px;
+.social-links a {
+  transition: transform 200ms ease-out;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
 }
 
 .loader-div {

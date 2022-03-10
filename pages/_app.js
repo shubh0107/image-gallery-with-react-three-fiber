@@ -1,21 +1,32 @@
+import Image from "next/image";
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
   return (
     <div className="app-container">
-      <a href="https://www.instagram.com/riaachakravarty/" target="_blank" rel="noreferrer noopener" id="name">
-        Ria Chakravarty
-      </a>
+      <p id="title">
+        Please Scroll to View Gallery ➡️
+      </p>
       <Component {...pageProps} />
-      <a
-        href="https://www.instagram.com/tilldeathwedoart2020/"
-        target="_blank"
-        rel="noreferrer noopener"
-        id="instagram-link"
-      >
-        Follow me
-        <img src="/instagram.svg" alt="instagram_link" />
-      </a>
+      <div className="social-links">
+        <span>Shubham Singh</span>
+        <a
+          href="https://github.com/shubh0107/"
+          target="_blank"
+          rel="noreferrer noopener"
+          id="github-link"
+        >
+          <Image src="/github.svg" alt="github_link" width={30} height={30} id="github-icon" />
+        </a>
+        <a
+          href="https://twitter.com/shoe_bam"
+          target="_blank"
+          rel="noreferrer noopener"
+          id="twitter-link"
+        >
+          <Image src="/twitter.svg" alt="twitter_link" width={30} height={30} id="twitter-icon" />
+        </a>
+      </div>
     </div>
   );
 }
